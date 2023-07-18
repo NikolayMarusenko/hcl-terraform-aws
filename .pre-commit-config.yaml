@@ -1,14 +1,24 @@
-repos:
+repos: 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.77.1
-    hooks:
+    rev: v1.79.1
+    hooks: 
       - id: terraform_fmt
+      # runs too long, so disabled, but ensure you are running this locally
+      - id: terraform_providers_lock
+        args: 
+            - --args=-platform=windows_amd64
+            - --args=-platform=darwin_amd64
+            - --args=-platform=linux_amd64
+            - --args=-platform=darwin_arm64
       - id: terraform_validate
+        args: 
+          - --tf-init-args=-lockfile=readonly
       - id: terraform_docs
-        args:
+        args: 
           - '--args=--lockfile=false'
       - id: terraform_tflint
-        args:
+        args: 
+          - '--args=--module'
           - '--args=--only=terraform_deprecated_interpolation'
           - '--args=--only=terraform_deprecated_index'
           - '--args=--only=terraform_unused_declarations'
@@ -22,3 +32,7 @@ repos:
           - '--args=--only=terraform_required_providers'
           - '--args=--only=terraform_standard_module_structure'
           - '--args=--only=terraform_workspace_remote'
+      - id: terraform_checkov
+        args: 
+          - '--args=--skip-check LOW'
+      - id: terraform_tfsec
