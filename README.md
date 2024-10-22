@@ -17,7 +17,7 @@ pre-commit run --all-files
 
 | Name | Version |
 |------|---------|
-| <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
+| <a name="provider_random"></a> [random](#provider\_random) | 3.6.3 |
 
 
 
@@ -25,10 +25,10 @@ pre-commit run --all-files
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | = 1.4.6 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.66.1 |
-| <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.2.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.5.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | = 1.5.7 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.72.1 |
+| <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.5.2 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.6.3 |
 
 ## Inputs
 
